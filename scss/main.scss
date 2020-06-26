@@ -106,7 +106,7 @@ $main-color-darker: #2e9448;
   background-color: $light-color;
   color: $dark-color;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 
   & > .u-container {
     display: grid;
@@ -126,7 +126,7 @@ $main-color-darker: #2e9448;
   &__body {
     background-color: $light-gray;
     padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
   }

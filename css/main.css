@@ -267,7 +267,7 @@ ul {
   background-color: #edf2f4;
   color: #22272c;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .works > .u-container {
@@ -292,7 +292,7 @@ ul {
 .works__body {
   background-color: #e6e6e6;
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
