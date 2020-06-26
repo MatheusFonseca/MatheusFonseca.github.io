@@ -1,0 +1,325 @@
+// Variables
+$logo-ff: 'MuseoModerno', cursive;
+$container-width: 980px;
+$header-height: 60px;
+
+// Colors
+$showcase-color: #292f36;
+$showcase-color-lighter: #404853;
+$dark-color: #22272c;
+$light-color: #edf2f4;
+$light-gray: #e6e6e6;
+$main-color: #90be6d;
+$main-color: #44e46c;
+$main-color-darker: #2e9448;
+// $main-color: #42df69;
+// $main-color: #23ce6b;
+// $main-color: #20ba60;
+
+// Imports
+@import 'base';
+@import 'utilities';
+
+// Header
+.nav {
+  width: 100%;
+  height: $header-height;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $showcase-color;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: $logo-ff;
+  color: $main-color;
+  // text-shadow: 3px 3px 0px $showcase-color-lighter;
+
+  &--white {
+    color: $light-gray;
+  }
+
+  &--small {
+    font-size: 1.5rem;
+  }
+}
+
+.showcase {
+  height: calc(100vh - #{$header-height});
+  padding: 2rem 0;
+  background-color: $showcase-color;
+
+  & > .u-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 90%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0px $main-color;
+  }
+
+  &__card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 0 1rem;
+  }
+
+  &__lead {
+    margin-top: 3rem;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-align: right;
+    color: $light-gray;
+  }
+
+  &__sublead {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: right;
+    color: $light-gray;
+    margin-bottom: 6rem;
+  }
+
+  &__text {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-align: left;
+    color: $light-color;
+  }
+}
+
+.works {
+  background-color: $light-color;
+  color: $dark-color;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  & > .u-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  &__lead {
+    grid-column: 1 / 3;
+    height: auto;
+    font-size: 2.5rem;
+    color: $dark-color;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  &__body {
+    background-color: $light-gray;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  &__name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.7rem 0;
+  }
+
+  &__tags {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+
+  &__tag {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  &__desc {
+    margin: 0 1rem 0.5rem 1rem;
+  }
+
+  &__btns {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    width: auto;
+    margin: 0.5rem 1rem 0 0;
+  }
+
+  &__li {
+    margin-left: 1rem;
+    text-indent: 5px;
+
+    &::before {
+      content: '- ';
+    }
+  }
+}
+
+.contact {
+  padding: 2rem;
+  background-color: $light-gray;
+  color: $dark-color;
+  text-align: center;
+
+  & > .u-container {
+    display: flex;
+  }
+
+  &__lead {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__info {
+    padding: 0 1rem;
+    flex: 1;
+  }
+
+  &__form {
+    padding: 0 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+
+  &__input {
+    height: 1.7rem;
+    padding: 0.3rem 0.5rem;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: 1px solid $dark-color;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px $main-color-darker;
+      border-color: $main-color-darker;
+    }
+  }
+
+  &__msg {
+    resize: vertical;
+    height: 4.5rem;
+    min-height: 4.5rem;
+    padding: 0.3rem 0.5rem;
+    width: 80%;
+    margin: auto;
+    border: 1px solid $dark-color;
+    margin-bottom: 1.5rem;
+
+    &:focus {
+      outline: none;
+      border-color: $main-color-darker;
+      box-shadow: 0 0 0 1px $main-color-darker;
+    }
+  }
+
+  .button {
+    width: 80%;
+    background-color: $dark-color;
+    color: $light-gray;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.2s all ease-in-out;
+
+    &::-moz-focus-inner {
+      // Removing ff outline
+      border: 0;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: $main-color-darker;
+      color: $dark-color;
+    }
+  }
+
+  &__sublead {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+  }
+
+  &__email {
+    color: $dark-color;
+    font-weight: 500;
+    border-bottom: 2px solid $dark-color;
+
+    &:focus {
+      outline: none;
+      color: $main-color-darker;
+      border-color: $main-color-darker;
+    }
+  }
+
+  &__phone {
+    margin: 1.5rem 0;
+
+    i {
+      background-color: $dark-color;
+      color: $light-gray;
+      padding: 3px;
+      border-radius: 2px;
+    }
+  }
+
+  &__socials-links:focus {
+    outline: none;
+    color: $main-color-darker;
+
+    & .fa {
+      color: $main-color-darker;
+    }
+  }
+
+  .fa {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: $dark-color;
+  }
+}
+
+.footer {
+  background-color: $showcase-color;
+  color: $light-gray;
+
+  & > .u-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

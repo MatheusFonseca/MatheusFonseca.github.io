@@ -1,0 +1,123 @@
+.u-container {
+  max-width: $container-width;
+  height: 100%;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.u-bold {
+  font-weight: 800;
+}
+
+.button {
+  padding: 0.5rem 0.8rem;
+  display: block;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: $light-color;
+  border: 1px solid $light-color;
+  position: relative;
+  transition: 0.08s color ease 0.12s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px $showcase-color, 0 0 0 5px $light-color;
+  }
+
+  &--main {
+    background-color: $main-color;
+    color: $showcase-color;
+    border-color: $main-color;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $showcase-color, 0 0 0 5px $main-color;
+    }
+  }
+
+  &--dark {
+    background-color: $dark-color;
+    border-color: $dark-color;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $light-gray, 0 0 0 5px $dark-color;
+    }
+  }
+
+  &--white {
+    background-color: $light-gray;
+    color: $showcase-color;
+  }
+
+  &--outline-dark {
+    border-color: $dark-color;
+    color: $dark-color;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $dark-color;
+    }
+  }
+
+  &--inline {
+    display: inline-block;
+  }
+
+  &--hover:hover {
+    color: $showcase-color;
+  }
+
+  &--hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 2px); // 2 pixels da borda
+    height: 100%;
+    z-index: -1;
+    background-color: $light-color;
+    clip-path: inset(0 0 100% 0);
+    transition: 0.2s all ease-in-out;
+  }
+
+  &--hover:hover::before {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.tag {
+  border-radius: 5px;
+  color: $light-color;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+
+  &--dark {
+    background-color: $dark-color;
+  }
+
+  &--blue {
+    background-color: #264de4;
+  }
+
+  &--orange {
+    background-color: #f06529;
+  }
+
+  &--pink {
+    background-color: #cd6799;
+  }
+
+  &--yellow {
+    background-color: #f0db4f;
+    color: $dark-color;
+  }
+
+  &--light-green {
+    background-color: #68a063;
+    color: $dark-color;
+  }
+
+  &--dark-green {
+    background-color: #3c873a;
+  }
+}
