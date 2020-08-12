@@ -16,9 +16,26 @@ $main-color-darker: #2e9448;
 // $main-color: #23ce6b;
 // $main-color: #20ba60;
 
+// Map for media queries breakpoints
+$breakpoints: (
+  'smaller': (
+    max-width: 580px,
+  ),
+  'small': (
+    max-width: 768px,
+  ),
+  'medium': (
+    max-width: 980px,
+  ),
+  'large': (
+    max-width: 1200px,
+  ),
+);
+
 // Imports
 @import 'base';
 @import 'utilities';
+@import 'functions';
 
 // Header
 .nav {
@@ -51,22 +68,47 @@ $main-color-darker: #2e9448;
   padding: 2rem 0;
   background-color: $showcase-color;
 
+  @include respond-to('small') {
+    height: auto;
+  }
+
+  @include respond-to('smaller') {
+    padding: 0;
+  }
+
   & > .u-container {
     display: grid;
     grid-template-columns: 45% 55%;
     align-items: center;
     justify-content: center;
+
+    @include respond-to('small') {
+      grid-template-columns: 100%;
+    }
   }
 
   &__img-wrapper {
     display: flex;
     justify-content: center;
+
+    @include respond-to('smaller') {
+      margin-top: 0.5rem;
+    }
   }
 
   &__img {
     width: 90%;
     object-fit: cover;
     box-shadow: 10px 10px 0px $main-color;
+
+    @include respond-to('small') {
+      width: auto;
+      height: 250px;
+    }
+
+    @include respond-to('smaller') {
+      height: 200px;
+    }
   }
 
   &__card {
@@ -75,6 +117,10 @@ $main-color-darker: #2e9448;
     z-index: 1;
     height: 100%;
     padding: 0 1rem;
+
+    @include respond-to('smaller') {
+      padding: 0;
+    }
   }
 
   &__lead {
@@ -83,6 +129,18 @@ $main-color-darker: #2e9448;
     line-height: 3.2rem;
     text-align: right;
     color: $light-gray;
+
+    @include respond-to('medium') {
+      font-size: 2.3rem;
+    }
+
+    @include respond-to('small') {
+      text-align: center;
+    }
+
+    @include respond-to('smaller') {
+      font-size: 2rem;
+    }
   }
 
   &__sublead {
@@ -92,6 +150,19 @@ $main-color-darker: #2e9448;
     text-align: right;
     color: $light-gray;
     margin-bottom: 6rem;
+
+    @include respond-to('medium') {
+      font-size: 1.2rem;
+    }
+
+    @include respond-to('small') {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    @include respond-to('smaller') {
+      font-size: 1.1rem;
+    }
   }
 
   &__text {
@@ -112,6 +183,10 @@ $main-color-darker: #2e9448;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    @include respond-to('small') {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__lead {
@@ -121,6 +196,10 @@ $main-color-darker: #2e9448;
     color: $dark-color;
     margin-bottom: 4rem;
     text-align: center;
+
+    @include respond-to('smaller') {
+      font-size: 2rem;
+    }
   }
 
   &__body {
@@ -175,6 +254,10 @@ $main-color-darker: #2e9448;
       content: '- ';
     }
   }
+
+  &__li:last-child {
+    margin-bottom: 1rem;
+  }
 }
 
 .contact {
@@ -185,11 +268,23 @@ $main-color-darker: #2e9448;
 
   & > .u-container {
     display: flex;
+
+    @include respond-to('small') {
+      flex-direction: column;
+    }
+
+    @include respond-to('smaller') {
+      padding: 1rem 0;
+    }
   }
 
   &__lead {
     font-size: 2.5rem;
     margin-bottom: 1.2rem;
+
+    @include respond-to('smaller') {
+      font-size: 2rem;
+    }
   }
 
   &__info {
@@ -210,6 +305,10 @@ $main-color-darker: #2e9448;
     margin: auto;
     font-weight: 500;
     margin-bottom: 0.3rem;
+
+    @include respond-to('smaller') {
+      width: 100%;
+    }
   }
 
   &__input {
@@ -219,6 +318,10 @@ $main-color-darker: #2e9448;
     margin: auto;
     margin-bottom: 1rem;
     border: 1px solid $dark-color;
+
+    @include respond-to('smaller') {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -237,6 +340,10 @@ $main-color-darker: #2e9448;
     border: 1px solid $dark-color;
     margin-bottom: 1.5rem;
 
+    @include respond-to('smaller') {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       border-color: $main-color-darker;
@@ -253,6 +360,10 @@ $main-color-darker: #2e9448;
     font-weight: 500;
     font-size: 1.1rem;
     transition: 0.2s all ease-in-out;
+
+    @include respond-to('smaller') {
+      width: 100%;
+    }
 
     &::-moz-focus-inner {
       // Removing ff outline
@@ -272,6 +383,10 @@ $main-color-darker: #2e9448;
     line-height: 2.2rem;
     font-weight: 400;
     margin-bottom: 1.2rem;
+
+    @include respond-to('medium') {
+      font-size: 1.1rem;
+    }
   }
 
   &__email {
@@ -321,5 +436,19 @@ $main-color-darker: #2e9448;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include respond-to('smaller') {
+      flex-direction: column;
+    }
+  }
+
+  &__signature {
+    @include respond-to('small') {
+      font-size: 0.9rem;
+    }
+
+    @include respond-to('smaller') {
+      margin-top: 1rem;
+    }
   }
 }

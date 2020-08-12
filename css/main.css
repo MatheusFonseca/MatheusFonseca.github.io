@@ -201,6 +201,18 @@ ul {
   background-color: #292f36;
 }
 
+@media (max-width: 768px) {
+  .showcase {
+    height: auto;
+  }
+}
+
+@media (max-width: 580px) {
+  .showcase {
+    padding: 0;
+  }
+}
+
 .showcase > .u-container {
   display: -ms-grid;
   display: grid;
@@ -214,6 +226,13 @@ ul {
           justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .showcase > .u-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
 .showcase__img-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +240,12 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 580px) {
+  .showcase__img-wrapper {
+    margin-top: 0.5rem;
+  }
 }
 
 .showcase__img {
@@ -231,12 +256,31 @@ ul {
           box-shadow: 10px 10px 0px #44e46c;
 }
 
+@media (max-width: 768px) {
+  .showcase__img {
+    width: auto;
+    height: 250px;
+  }
+}
+
+@media (max-width: 580px) {
+  .showcase__img {
+    height: 200px;
+  }
+}
+
 .showcase__card {
   text-align: center;
   position: relative;
   z-index: 1;
   height: 100%;
   padding: 0 1rem;
+}
+
+@media (max-width: 580px) {
+  .showcase__card {
+    padding: 0;
+  }
 }
 
 .showcase__lead {
@@ -247,6 +291,24 @@ ul {
   color: #e6e6e6;
 }
 
+@media (max-width: 980px) {
+  .showcase__lead {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase__lead {
+    text-align: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .showcase__lead {
+    font-size: 2rem;
+  }
+}
+
 .showcase__sublead {
   margin-left: 0.5rem;
   font-size: 1.5rem;
@@ -254,6 +316,25 @@ ul {
   text-align: right;
   color: #e6e6e6;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 980px) {
+  .showcase__sublead {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase__sublead {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .showcase__sublead {
+    font-size: 1.1rem;
+  }
 }
 
 .showcase__text {
@@ -278,6 +359,13 @@ ul {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .works > .u-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .works__lead {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -287,6 +375,12 @@ ul {
   color: #22272c;
   margin-bottom: 4rem;
   text-align: center;
+}
+
+@media (max-width: 580px) {
+  .works__lead {
+    font-size: 2rem;
+  }
 }
 
 .works__body {
@@ -352,6 +446,10 @@ ul {
   content: '- ';
 }
 
+.works__li:last-child {
+  margin-bottom: 1rem;
+}
+
 .contact {
   padding: 2rem;
   background-color: #e6e6e6;
@@ -365,9 +463,30 @@ ul {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .contact > .u-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 580px) {
+  .contact > .u-container {
+    padding: 1rem 0;
+  }
+}
+
 .contact__lead {
   font-size: 2.5rem;
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 580px) {
+  .contact__lead {
+    font-size: 2rem;
+  }
 }
 
 .contact__info {
@@ -399,6 +518,12 @@ ul {
   margin-bottom: 0.3rem;
 }
 
+@media (max-width: 580px) {
+  .contact__label {
+    width: 100%;
+  }
+}
+
 .contact__input {
   height: 1.7rem;
   padding: 0.3rem 0.5rem;
@@ -406,6 +531,12 @@ ul {
   margin: auto;
   margin-bottom: 1rem;
   border: 1px solid #22272c;
+}
+
+@media (max-width: 580px) {
+  .contact__input {
+    width: 100%;
+  }
 }
 
 .contact__input:focus {
@@ -424,6 +555,12 @@ ul {
   margin: auto;
   border: 1px solid #22272c;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 580px) {
+  .contact__msg {
+    width: 100%;
+  }
 }
 
 .contact__msg:focus {
@@ -445,6 +582,12 @@ ul {
   transition: 0.2s all ease-in-out;
 }
 
+@media (max-width: 580px) {
+  .contact .button {
+    width: 100%;
+  }
+}
+
 .contact .button::-moz-focus-inner {
   border: 0;
 }
@@ -462,6 +605,12 @@ ul {
   line-height: 2.2rem;
   font-weight: 400;
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 980px) {
+  .contact__sublead {
+    font-size: 1.1rem;
+  }
 }
 
 .contact__email {
@@ -517,5 +666,26 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 580px) {
+  .footer > .u-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__signature {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer__signature {
+    margin-top: 1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
