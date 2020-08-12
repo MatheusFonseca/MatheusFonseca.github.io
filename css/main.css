@@ -613,6 +613,12 @@ ul {
   }
 }
 
+@media (max-width: 580px) {
+  .contact__sublead {
+    font-size: 1rem;
+  }
+}
+
 .contact__email {
   color: #22272c;
   font-weight: 500;
