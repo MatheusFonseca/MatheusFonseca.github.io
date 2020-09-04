@@ -6,9 +6,11 @@
     <title>Matheus Fonseca</title>
     <script>
       function onSubmit() {
-        document.getElementById('fnome').value = '';
-        document.getElementById('femail').value = '';
-        document.getElementById('fmensagem').value = '';
+        setTimeout(() => {
+          document.getElementById('fnome').value = '';
+          document.getElementById('femail').value = '';
+          document.getElementById('fmensagem').value = '';
+        }, 1000);
       }
     </script>
     <link
