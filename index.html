@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matheus Fonseca</title>
+    <script>
+      function onSubmit() {
+        document.getElementById('fnome').value = '';
+        document.getElementById('femail').value = '';
+        document.getElementById('fmensagem').value = '';
+      }
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Exo:wght@200;400;500;900&display=swap"
       rel="stylesheet"
@@ -57,11 +64,12 @@
       <div class="u-container">
         <!-- CHAVEIRO CARECA -->
         <div class="works__body">
-          <img
-            class="works__img"
-            src="./img/chaveiro-careca.png"
-            alt="Site Chaveiro Careca"
-          />
+          <a href="/chaveiro-careca" target="_blank">
+            <img
+              class="works__img"
+              src="./img/chaveiro-careca.png"
+              alt="Site Chaveiro Careca"
+          /></a>
           <h4 class="works__name">Site Chaveiro Careca</h4>
           <p class="works__desc">
             Tentando manter identidade e cores, reconstruí o site do Chaveiro
@@ -82,22 +90,29 @@
             <a
               href="https://github.com/MatheusFonseca/chaveiro-careca"
               class="works__btn button button--inline button--dark"
+              target="_blank"
               >Código</a
             >
             <a
               href="/chaveiro-careca"
               class="works__btn button button--inline button--outline-dark"
+              target="_blank"
               >Testar</a
             >
           </div>
         </div>
         <!-- Este Site! -->
         <div class="works__body">
-          <img
-            class="works__img"
-            src="./img/matheus-fonseca.png"
-            alt="Site Matheus Fonseca"
-          />
+          <a
+            href="https://github.com/MatheusFonseca/MatheusFonseca.github.io"
+            target="_blank"
+          >
+            <img
+              class="works__img"
+              src="./img/matheus-fonseca.png"
+              alt="Site Matheus Fonseca"
+            />
+          </a>
           <h4 class="works__name">Este site!</h4>
           <p class="works__desc">
             Criei este site para mostrar meus trabalhos e procurar novas
@@ -115,17 +130,20 @@
             <a
               href="https://github.com/MatheusFonseca/MatheusFonseca.github.io"
               class="works__btn button button--inline button--dark"
+              target="_blank"
               >Código</a
             >
           </div>
         </div>
         <!-- CADERNETA ELETRÔNICA -->
         <div class="works__body">
-          <img
-            class="works__img"
-            src="./img/caderneta.gif"
-            alt="API TestManager"
-          />
+          <a href="/caderneta-eletronica" target="_blank">
+            <img
+              class="works__img"
+              src="./img/caderneta.gif"
+              alt="Caderneta Eletrônica"
+            />
+          </a>
           <h4 class="works__name">Caderneta Eletrônica</h4>
           <p class="works__desc">
             Pensando no problema que pequenos estabelecimentos têm em gerenciar
@@ -134,7 +152,7 @@
           <p class="works__desc">
             Acho que para aprender frameworks javascript você precisa antes
             entender bem a linguagem, então fiz esse projeto com JS puro,
-            manipulando a IU e guardadando valores na LocalStorage.
+            manipulando a IU e guardando valores na LocalStorage.
           </p>
           <ul class="works__tags">
             <li class="works__tag tag tag--blue">CSS</li>
@@ -144,20 +162,30 @@
           <div class="works__btns">
             <a
               href="https://github.com/MatheusFonseca/caderneta-eletronica"
-              target="blank"
+              target="_blank"
               class="works__btn button button--inline button--dark"
               >Código</a
             >
             <a
               href="/caderneta-eletronica"
               class="works__btn button button--inline button--outline-dark"
+              target="_blank"
               >Testar</a
             >
           </div>
         </div>
         <!-- TESTMANAGER API -->
         <div class="works__body">
-          <img class="works__img" src="./img/json.png" alt="API TestManager" />
+          <a
+            href="https://github.com/MatheusFonseca/TestManager-API"
+            target="_blank"
+          >
+            <img
+              class="works__img"
+              src="./img/json.png"
+              alt="API TestManager"
+            />
+          </a>
           <h4 class="works__name">TestManager API</h4>
           <p class="works__desc">
             Baseado em um exercício da universidade, construí uma API que
@@ -178,7 +206,7 @@
           <div class="works__btns">
             <a
               href="https://github.com/MatheusFonseca/TestManager-API"
-              target="blank"
+              target="_blank"
               class="works__btn button button--inline button--dark"
               >Documentação</a
             >
@@ -198,34 +226,54 @@
           <a class="contact__email" href="mailto:matheusfonsecamorais@gmail.com"
             >matheusfonsecamorais@gmail.com</a
           >
-          <p class="contact__phone">
-            Whatsapp — (35) 99841-5748
-          </p>
+          <p class="contact__phone">Whatsapp — (35) 99841-5748</p>
           <div class="contact__socials">
             <a
               class="contact__socials-links"
               href="https://www.linkedin.com/in/matheusfonsecademorais/"
-              target="blank"
+              target="_blank"
             >
               <i class="fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
             <a
               class="contact__socials-links"
               href="https://github.com/MatheusFonseca"
-              target="blank"
+              target="_blank"
             >
               <i class="fa fa-github" aria-hidden="true"></i>
             </a>
           </div>
         </div>
-        <form class="contact__form" action="#">
+        <form class="contact__form" method="POST" target="_blank">
           <label class="contact__label" for="fnome">Nome</label>
-          <input class="contact__input" type="text" id="fnome" />
+          <input
+            class="contact__input"
+            type="text"
+            id="fnome"
+            name="nome"
+            required
+          />
           <label class="contact__label" for="femail">Email</label>
-          <input class="contact__input" type="email" id="femail" />
+          <input
+            class="contact__input"
+            type="email"
+            id="femail"
+            name="_replyto"
+            required
+          />
           <label class="contact__label" for="fmensagem">Mensagem</label>
-          <textarea class="contact__msg" id="fmensagem"></textarea>
-          <input class="button button--dark" type="submit" value="Enviar" />
+          <textarea
+            class="contact__msg"
+            id="fmensagem"
+            name="message"
+            required
+          ></textarea>
+          <input
+            class="button button--dark"
+            type="submit"
+            value="Enviar"
+            onclick="onSubmit()"
+          />
         </form>
       </div>
     </section>
